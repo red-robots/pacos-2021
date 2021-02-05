@@ -1,0 +1,815 @@
+.main-navigation {
+	clear: both;	
+	text-align: center;
+	width: 100%;
+	display: none;
+	@media screen and (min-width: $tabwidth) {
+		
+		// top: 16px;
+		// right: -10px;
+		// padding-left: 0;
+	}
+	@media screen and (min-width: $midwidth) {
+		position: relative;
+		display: block;
+		clear: none;
+		width: auto;
+		top: 0;
+		padding-left: 0;
+		right: -12px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		text-align: left;
+		right: -20px;
+	}
+	ul {
+		list-style: none;
+		margin: 0 0;
+		padding: 0 0;
+	}
+	.menu {
+		display: block;
+		@include transition(all ease 1s);
+		@media screen and (min-width: $tabwidth) {
+			display: inline-block;
+			float: right;
+			width: auto;
+			text-align: right;
+		}
+		@media screen and (min-width: $midwidth) {
+			text-align: center;
+		}
+
+	}
+
+	li {
+		hyphens: none;
+		float: left;
+		position: relative;
+		&.menu-item-has-children {
+			z-index: 5;
+		}
+	}
+	.menu-main-menu-container {
+		width: 100%;
+		float: left;
+	}
+	.menu > li {
+		display: inline-block;
+		@media screen and (min-width: $tabwidth) {
+			padding:0 8px;
+			float: none;
+		}
+		@media screen and (min-width: $midwidth) {
+			float: left;
+			padding:0 8px;
+			line-height: .1;
+		}
+		@media screen and (min-width: $deskwidth) {
+			padding:0 10px;
+			line-height: 1;
+		}
+	}
+	.menu > li > a {
+		padding:15px 0;
+		position: relative;
+		letter-spacing: 1px;
+		@media screen and (min-width: $tabwidth) {
+			margin-bottom: 2px;
+			font-size: 12px;
+			padding:15px 0 15px;
+			font-weight: 400;
+		}
+		@media screen and (min-width: $midwidth) {
+			margin-bottom: 5px;
+			font-size: 14px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			// font-size: 16px;
+		}
+		&:after {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 2px;
+			background: #98b2bf;
+			position: absolute;
+			margin: 5px auto 0;
+			transform: scaleX(0);
+			visibility: hidden;
+			transition: all ease-out 0.3s;
+		}
+	}
+	li.current_page_parent > a,
+	li.current_page_item > a,
+	li.current_page_item:hover > a,
+	.menu > li:hover > a {
+		&:after {
+			transform: scaleX(1);
+			visibility: visible;
+		}
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+		// font-family: $font-ProximaNova;
+		font-weight: 300;
+		text-transform: lowercase;
+		color: #FFF;
+		@include transition(all ease-out .3s);
+	}
+
+	.menu ul {
+		margin: 0 0;
+		padding: 0 0;
+		@include transition(all ease-out .3s);
+		@media screen and (min-width: $tabwidth) {
+			display: block;
+			width: 220px;
+			position: absolute;
+			right: 20px;
+			background: rgba(152,178,191,.4);
+			padding-top: 0;
+			padding-bottom: 0;
+			max-height: 0;
+			overflow: hidden;
+		}
+		li {
+			display: block;
+			width: 100%;
+			@media screen and (min-width: $tabwidth) {
+				text-align: right;
+				a {
+					text-transform: none;
+					padding:2px 10px;
+					opacity: 0.5;
+					&:hover {
+						opacity: 1;
+					}
+				}
+			}
+			&.current-menu-item > a {
+				@media screen and (min-width: $tabwidth) {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	.menu > li:hover > ul {
+		max-height: 1000px;
+		overflow: visible;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
+}
+// .home #primary-menu > li:first-child {
+// 	display: none;
+// }
+.subpage .main-navigation {
+	@media screen and (min-width: $tabwidth) {
+		.menu > li > a {
+			// color: $color-theme;
+		}
+		.menu > li > a:after {
+			// background: $color-gold;
+		}
+		.menu ul {
+			// background: $color-dark-teal;
+		}
+	}
+}
+
+/* Small menu. */
+button.menu-toggle {
+	border: 0px;
+	box-sizing: none;
+	border-radius: 0;
+	-webkit-appearance: none;
+	background: transparent;
+	box-shadow: none;
+	display: block;
+	width: 35px;
+	height: 25px;
+	position: absolute;
+	top: 50%;
+  	transform: translateY(-50%);
+	right: 20px;
+	padding: 0 0;
+	z-index: 10000;
+	@media screen and (min-width: $tabwidth) {
+		display: none;
+	}
+	span,
+	span:before,
+	span:after {
+		position: absolute;
+		top: 10px;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 3px;
+		background: #FFF;
+	    transition-property: background-color, transform, -webkit-transform;
+	    transition-duration: 0.3s;
+	}
+	span {
+		&:before,
+		&:after {
+			content: "";
+			display: block;
+		} 
+		&:before {
+			top: -10px;
+		}
+		&:after {
+			top: 10px;
+		}
+	}
+	&:hover {
+		background: transparent;
+	}
+}
+button.menu-toggle.open {
+	span {
+		background: transparent;
+		&:before {
+			transform: translateY(10px) rotate(45deg);
+		}
+		&:after {
+			transform: translateY(-10px) rotate(-45deg);
+		}
+	}
+}
+.subpage {
+	button.menu-toggle span, 
+	button.menu-toggle span:before, 
+	button.menu-toggle span:after {
+		// background: $color-theme;
+	}
+	button.menu-toggle.open {
+		span {
+			background: transparent;
+		}
+	}
+}
+.scrolled #masthead {
+	box-shadow: 0px 2px 13px 0px rgba(0,0,0,0.24);
+}
+#site-mobile-navigation {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 102;
+	// background: $color-dark-green;
+	transform: translateX(100%);
+    transition: -webkit-transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86), -webkit-transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	@media screen and (min-width: $tabwidth) {
+		display: none;
+	}
+	.menu {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	.menu,
+	.menu ul li,
+	.menu > li,
+	.menu ul {
+		display: block;
+		width: 100%;
+		float: left;
+	}
+	.menu a {
+		display: inline-block;
+		font-weight: 400;
+	}
+	.menu > li > a {
+		font-size: 20px;
+	}
+	.menu ul a {
+		padding-top: 7px;
+		padding-bottom: 7px;
+		font-size: 16px;
+		opacity: 0.5;
+		&:hover {
+			opacity: 1;
+		}
+	}
+	.menu > li > ul {
+		padding-top: 5px;
+		padding-bottom: 10px;
+	}
+}
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}
+#wpadminbar {
+	margin-top: 0;
+}
+body.open-menu {
+	#site-mobile-navigation {
+		transform: translateX(0px);
+	}
+}
+// Burger parts
+//
+// (---) top    -> &::before
+// [---] middle -> &
+// (---) bottom -> &::after
+
+
+// Vendor prefixes
+$sass-burger-add-vendor-prefixes: true !default;
+
+// Burger
+@mixin burger($width: 30px, $height: 5px, $gutter: 3px, $color: #000, $border-radius: 0, $transition-duration: .3s) {
+    $burger-height: $height !global;
+    $burger-gutter: $gutter !global;
+
+    position: relative;
+    margin-top: $height + $gutter;
+    margin-bottom: $height + $gutter;
+
+    @if $sass-burger-add-vendor-prefixes {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
+    user-select: none;
+
+    // 1. Fixes jagged edges in Firefox, see issue #10.
+    &, &::before, &::after {
+        display: block;
+        width: $width;
+        height: $height;
+        background-color: $color;
+        outline: 1px solid transparent; // 1
+        @if $border-radius != 0 {
+            border-radius: $border-radius;
+        }
+
+        @if $sass-burger-add-vendor-prefixes {
+            -webkit-transition-property: background-color, -webkit-transform;
+            -moz-transition-property: background-color, -moz-transform;
+            -o-transition-property: background-color, -o-transform;
+        }
+        transition-property: background-color, transform;
+
+        @if $sass-burger-add-vendor-prefixes {
+            -webkit-transition-duration: $transition-duration;
+            -moz-transition-duration: $transition-duration;
+            -o-transition-duration: $transition-duration;
+        }
+        transition-duration: $transition-duration;
+    }
+
+    &::before, &::after {
+        position: absolute;
+        content: "";
+    }
+
+    &::before {
+        top: -($height + $gutter);
+    }
+
+    &::after {
+        top: $height + $gutter;
+    }
+}
+
+
+// Select parts of the burger
+@mixin burger-parts {
+    &, &::before, &::after {
+        @content;
+    }
+}
+
+@mixin burger-top {
+    &::before {
+        @content;
+    }
+}
+
+@mixin burger-middle {
+    & {
+        @content;
+    }
+}
+
+@mixin burger-bottom {
+    &::after {
+        @content;
+    }
+}
+
+
+// Burger animations
+@mixin burger-to-cross($color: auto) {
+    & {
+        background-color: transparent;
+    }
+    @if ($color != auto) {
+        &::before, &::after {
+            background-color: $color;
+        }
+    }
+    &::before {
+        @if $sass-burger-add-vendor-prefixes {
+            -webkit-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+            -moz-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+            -ms-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+            -o-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+        }
+        transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+    }
+    &::after {
+        @if $sass-burger-add-vendor-prefixes {
+            -webkit-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+            -moz-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+            -ms-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+            -o-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+        }
+        transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+    }
+}
+/*  COLORS
+========================================== */
+$black: #000000;
+$white: #ffffff;
+$gray: #2a2a2a;
+$gold: #b7ac7f;
+
+/*  FONTS
+========================================== */
+
+$raleway: 'Raleway', sans-serif;
+$spectral: 'Spectral', serif;
+
+
+/*  MIXINS
+========================================== */
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+     -moz-transform: $transform;
+      -ms-transform: $transform;
+       -o-transform: $transform;
+          transform: $transform;
+}
+
+@mixin transition($transition) {
+  -webkit-transition: #{$transition};
+     -moz-transition: #{$transition};
+       -o-transition: #{$transition};
+          transition: #{$transition};
+}
+
+@mixin transition-delay($transition-delay) {
+  -webkit-transition-delay: #{$transition-delay};
+     -moz-transition-delay: #{$transition-delay};
+       -o-transition-delay: #{$transition-delay};
+          transition-delay: #{$transition-delay};
+}
+
+/*  RESET
+========================================== */
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  
+  &.overflow {
+    overflow: hidden;
+  }
+}
+/*  BURGER
+========================================== */
+body.home {
+  .burger {
+    span {
+      @include burger(30px, 3px, 6px, #fff);
+    }
+     &.clicked {
+      span {
+        @include burger-to-cross;
+        
+        &:before, &:after {
+          background-color: $white;
+        }
+      }
+    }
+  }
+}
+.burger {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  border-radius: 4px;
+  z-index: 100002;
+  @media screen and (min-width: $midwidth) {
+  	display: none;
+  }
+  
+  span {
+    @include burger(30px, 3px, 6px, #fff); // gray
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: -1.5px;
+  }
+  
+  &.clicked {
+    span {
+      @include burger-to-cross;
+      
+      &:before, &:after {
+        background-color: $white;
+      }
+    }
+  }
+  
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+
+/*  NAV
+========================================== */
+
+nav.mobilemenu {
+  background-color: $color-red;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  right: 0;
+  height: 100%;
+  max-width: 515px;
+  width: 100%;
+  padding: 100px 40px 60px 40px;
+  overflow-y: auto;
+  z-index: 100001;
+  // background: {
+  // 	image: url(assets/img/pepper-white.png);
+  // 	repeat: no-repeat;
+  // 	size: 20%;
+  // 	position: right 10px bottom 10px;
+  // }
+  @include transform(translateX(100%));
+  @include transition(transform .55s cubic-bezier(0.785, 0.135, 0.15, 0.86));
+	&::after {
+		content: "";
+		background: {
+			image: url(assets/img/pepper-white.png);
+			repeat: no-repeat;
+		}
+		opacity: 0.5;
+		bottom: 20px;
+		right: 20px;
+		position: absolute;
+		z-index: -1;   
+		width: 120px;
+		height: 100px;
+	}
+  @media screen and (min-width: $midwidth) {
+  	display: none;
+  }
+  
+  &.show {
+    @include transform(translateX(0px));
+    
+    ul.main {
+      li {
+        @include transform(translateX(0px));
+        opacity: 1;
+        color: #fff;
+        text-transform: uppercase;
+        cursor:pointer;
+        @for $i from 1 to 10 { 
+          &:nth-child(#{$i}) {
+            transition-delay: $i * 0.15s;
+          }
+        }
+        ul.dropdown {
+        	max-height: 0;
+        	overflow: hidden;
+        	li {
+        		list-style: none;
+        		font-size: 14px;
+        	}
+        }
+        ul.dropdown.active {
+        	max-height: 1000px;
+        }
+      }
+    }
+    
+    .about, .social, ul.sub {
+      @include transform(translateY(0px));
+      opacity: 1;
+      transition-delay: .85s;
+    }
+  }
+  
+  @media (min-width: 667px) {
+    padding: 120px 90px 70px 90px;
+  }
+   
+  ul.main {
+    list-style-type: none;
+    margin: 0;
+    
+    li {
+      margin-bottom: 20px;
+      @include transform(translateX(40px));
+      opacity: 0;
+     font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      padding: 10px 0;
+      @include transition(all .3s ease);
+      
+      &:last-of-type {
+        margin-bottom: 0px;
+      }
+      
+      a {
+        color: $white;
+        // font-family: $raleway;
+         text-decoration: none;
+        display: block;
+        
+        
+        @include transition(all .3s ease);
+        
+        span {
+          color: $gold;
+        }
+        
+        &:hover {
+          // color: $gold;
+        }
+      }
+    }
+    ul.dropdown {
+    	@include transition(all .5s ease);
+    	li {
+    		margin: 0;
+    	}
+    }
+  }
+  
+  .about {
+    margin-top: 40px;
+    @include transform(translateY(30px));
+    opacity: 0;
+    @include transition(all .4s ease);
+    
+    p {
+      color: $white;
+      font-family: $spectral;
+      font-size: 1.05rem;
+      letter-spacing: 0.5px;
+      line-height: 170%;
+    }
+  }
+  
+  .social {
+    margin-top: 40px;
+    position: relative;
+    padding-bottom: 30px;
+    @include transform(translateY(30px));
+    opacity: 0;
+    @include transition(all .4s ease);
+    
+    &:after {
+      content: "";
+      width: 230px;
+      height: 2px;
+      background-color: $gold;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    
+    a {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      margin-right: 25px;
+      
+      &:last-of-type {
+        margin-right: 0px;
+      }
+      
+      &:hover {
+        svg {
+          path, circle {
+            fill: $gold;
+          }
+        }
+      }
+      
+      svg {
+        width: 100%;
+        height: 100%;
+        
+        path, circle {
+          fill: $white;
+          @include transition(all .3s ease);
+        }
+      }
+    }
+  }
+  
+  ul.sub {
+    list-style-type: none;
+    margin-top: 40px;
+    @include transform(translateY(30px));
+    opacity: 0;
+    @include transition(all .4s ease);
+    
+    li {
+      margin-bottom: 10px;
+      
+      &:last-of-type {
+        margin-bottom: 0px;
+      }
+      
+      a {
+        color: $white;
+        font-family: $raleway;
+        letter-spacing: 1px;
+        font-size: 0.9rem;
+        text-decoration: none;
+        @include transition(all .3s ease);
+        
+        &:hover {
+          color: $gold;
+        }
+      }
+    }
+  }
+}
+
+
+/*  OVERLAY
+========================================== */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height:100%;
+  @include transition(all 0.3s ease-in-out);
+  background-color: $gold;
+  opacity: 0;
+  visibility: hidden;
+  
+  &.show {
+    opacity: 0.8;
+    visibility: visible;
+  }
+}
