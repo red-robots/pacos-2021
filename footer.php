@@ -13,10 +13,43 @@
 	// $footer_logos = get_field("footer_logos","option");
 	$footer_text = get_field('partners_text','option');
 	$partners = get_field('partners_list','option');
+	$address = get_field('address','option');
+	$facebook = get_field('facebook','option');
+	$twitter = get_field('twitter','option');
+	$instagram = get_field('instagram','option');
 	?>
+<div class="row-1">
+	<?php if( $facebook || $twiiter || $instagram) : ?>
+		<div class="social">
+			<?php if( $facebook ) { ?>
+				<a href="<?php echo $facebook; ?>">
+					<i class="fab fa-facebook"></i>
+				</a>
+			<?php } ?>
+			<?php if( $twitter ) { ?>
+				<a href="<?php echo $twitter; ?>">
+					<i class="fab fa-twitter"></i>
+				</a>
+			<?php } ?>
+			<?php if( $instagram ) { ?>
+				<a href="<?php echo $instagram; ?>">
+					<i class="fab fa-instagram"></i>
+				</a>
+			<?php } ?>
+		</div>
+	<?php endif; ?>
+	<?php if( $address ) : ?>
+		<div class="address">
+			<?php echo $address; ?>
+		</div>
+	<?php endif; ?>
+</div>
+	
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<img class="nomobile" src="<?php bloginfo('template_url'); ?>/assets/img/footer.png">
 		<div class="footer-content cf">
+
+			
 				
 				
 

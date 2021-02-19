@@ -1,3 +1,69 @@
+@font-face {
+    font-family: 'luchadoroblique';
+    src: url('fonts/luchador-oblique-webfont.woff2') format('woff2'),
+         url('fonts/luchador-oblique-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'luchadorregular';
+    src: url('fonts/luchador-regular-webfont.woff2') format('woff2'),
+         url('fonts/luchador-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+// @font-face {
+//     font-family: 'atc_arquettebold';
+//     src: url('fonts/atcarquette-bold-webfont.woff2') format('woff2'),
+//          url('fonts/atcarquette-bold-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+
+// }
+// @font-face {
+//     font-family: 'atc_arquetteregular';
+//     src: url('fonts/atcarquette-regular-webfont.woff2') format('woff2'),
+//          url('fonts/atcarquette-regular-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+
+// }
+// @font-face {
+//     font-family: 'atc_arquettesemibold_italic';
+//     src: url('fonts/atcarquette-semibolditalic-webfont.woff2') format('woff2'),
+//          url('fonts/atcarquette-semibolditalic-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+
+// }
+
+// @font-face {
+//     font-family: 'proxima_novaregular';
+//     src: url('fonts/proxima_nova_regular-webfont.woff2') format('woff2'),
+//          url('fonts/proxima_nova_regular-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+
+// }
+// @font-face {
+//     font-family: 'proxima_novabold';
+//     src: url('fonts/proximanova-bold-webfont.woff2') format('woff2'),
+//          url('fonts/proximanova-bold-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+
+// }
+// @font-face {
+//     font-family: 'proxima_novasemibold';
+//     src: url('fonts/proximanova-sbold-webfont.woff2') format('woff2'),
+//          url('fonts/proximanova-sbold-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+
+// }
+
 $color_link: royalblue;
 $color_link_visited: purple;
 $color_link_hover: midnightblue;
@@ -9,6 +75,8 @@ $color-red: #bc5027;
 $color-beige: #eae1c5;
 
 $font_main: 'Sarabun', sans-serif;
+$font-headings: 'luchadorregular';
+$font-headings-italic: 'luchadoroblique';
 $font_code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font_pre: "Courier 10 Pitch", Courier, monospace;
 

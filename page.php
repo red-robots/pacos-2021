@@ -20,15 +20,16 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<section class="paper">
+				<?php
+				while ( have_posts() ) : the_post();
 
-			<?php
-			while ( have_posts() ) : the_post();
+					the_content();
 
-				the_content();
-
-			endwhile; // End of the loop.
-			?>
-			<?php if( is_page( 'menus' ) ) { get_template_part('parts/menu'); } ?>
+				endwhile; // End of the loop.
+				?>
+			</section>
+			<?php //if( is_page( 'menus' ) ) { get_template_part('parts/menu'); } ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
