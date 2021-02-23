@@ -228,7 +228,7 @@ header.site-header {
 		}
 		@include mid() {
 			&:hover {
-				top: 10px;
+				top: 6px;
 			}
 		}
 	}
@@ -796,5 +796,32 @@ footer.site-footer {
 		// background: var(--unnamed-color-d3aa2d) 0% 0% no-repeat padding-box;
 		// background: #D3AA2D 0% 0% no-repeat padding-box;
 		// opacity: 1;
+	}
+}
+.gform_body {
+	input, textarea, select {
+		border-bottom: 2px solid $color-red;
+		border-top: 0;
+		border-left: 0;
+		border-right: 0;
+		background-color: rgba($color-yellow, .3);
+		border-radius: 0;
+	}
+	
+}
+.gform_footer {
+	input[ type = submit ] {
+		background-color: rgba($color-yellow, 1);
+		color: #fff;
+		border-radius: 0;
+		text-shadow: none;
+		padding: 20px 40px;
+		box-shadow: none;
+		border: 0;
+		text-transform: uppercase;
+		transition: all ease .2s;
+		&:hover {
+			background-color: rgba($color-red, 1);
+		}
 	}
 }

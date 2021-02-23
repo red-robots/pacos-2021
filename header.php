@@ -49,18 +49,19 @@
 					<a href="<?php echo $rezLink; ?>">Reservations</a>
 				</div>
 			</div> -->
+
 			<div class="btn-wrap">
 				<div class="order-btn">
-					<a class="mobile" href="<?php echo $orderLink; ?>">
+					<a class="mobile" href="<?php echo $orderlink; ?>" target="_blank">
 						<img src="<?php bloginfo('template_url'); ?>/assets/img/button-order-mobile.png" alt="Order and Delivery">
 					</a>
-					<a class="desktop" href="<?php echo $orderLink; ?>">Order and Delivery</a>
+					<a class="desktop" href="<?php echo $orderlink;?>" target="_blank">Order and Delivery</a>
 				</div>
 				<div class="rez-btn">
-					<a class="mobile" href="<?php echo $rezLink; ?>">
+					<a class="mobile" href="<?php echo $rezlink; ?>" target="_blank">
 						<img src="<?php bloginfo('template_url'); ?>/assets/img/button-reservations-mobile.png" alt="Reservations">
 					</a>
-					<a class="desktop" href="<?php echo $rezLink; ?>">Reservations</a>
+					<a class="desktop" href="<?php echo $rezlinkr; ?>" target="_blank">Reservations</a>
 				</div>
 			</div>
 
