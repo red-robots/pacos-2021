@@ -117,7 +117,7 @@ body {
 		margin: -3px 0 0 0;
 	}
 	@include desk() {
-		
+		margin: -10px 0 0 0;
 	}
 	a {
 		display: block;
@@ -146,7 +146,7 @@ header.site-header {
 	position: relative;
 	z-index: 1000;
 	background: {
-		image: url(assets/img/header.png);
+		
 		repeat: no-repeat;
 		size: contain;
 		color: rgba($color-blue, 1);
@@ -157,7 +157,10 @@ header.site-header {
 	@include mid {
 		position: fixed;
 		top: 0;
-		background-color:  rgba($color-blue, 1);
+		background: {
+			color:  rgba($color-blue, 0);
+			image: url(assets/img/header.png);
+		}
 	}
 	@include desk {
 		
@@ -382,10 +385,10 @@ section.banner {
 			// top: 0;
 		}
 		@include mid {
-			top: 80px;
+			top: 40px;
 		}
 		@include desk {
-			top: 80px;
+			top: 40px;
 		}
 		&.private-dining {
 			top: -80px;
@@ -399,7 +402,7 @@ section.banner {
 				left: -60px;
 			}
 			@include desk {
-				top: 100px;
+				top: 40px;
 				left: -60px;
 			}
 		}

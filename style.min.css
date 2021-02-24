@@ -1366,7 +1366,7 @@ body{font-family:"Sarabun",sans-serif;background-color:#fbefe1}
 .logo,h1.logo,.logo a,h1.logo a{width:250px;height:84px}
 .logo,h1.logo{margin:-3px auto 20px auto;background-size:cover;background-repeat:no-repeat;background-image:url(assets/img/logo.png)}
 .logo a,h1.logo a{display:block;text-indent:-9000px}
-header.site-header{width:100%;position:relative;z-index:1000;background-image:url(assets/img/header.png);background-repeat:no-repeat;background-size:contain;background-color:#395b6f}
+header.site-header{width:100%;position:relative;z-index:1000;background-repeat:no-repeat;background-size:contain;background-color:#395b6f}
 header.site-header .btn-wrap{width:100%;text-align:center}
 header.site-header .order-btn a.mobile img,header.site-header .rez-btn a.mobile img{display:block}
 header.site-header .order-btn a.desktop,header.site-header .rez-btn a.desktop{display:none}
@@ -1463,7 +1463,7 @@ footer.site-footer .section-partners .info{-ms-flex-preferred-size:16%;flex-basi
 nav.mobilemenu{display:none}
 }@media(min-width:900px){.logo,h1.logo{margin:-3px 0 0 0}
 body.logged-in header.site-header{top:32px}
-header.site-header{position:fixed;top:0;background-color:#395b6f}
+header.site-header{position:fixed;top:0;background-color:rgba(57,91,111,0);background-image:url(assets/img/header.png)}
 header.site-header .btn-wrap{margin:-20px 0 0 0;float:right;display:block}
 header.site-header .order-btn a.mobile img,header.site-header .rez-btn a.mobile img{display:none}
 header.site-header .order-btn a.desktop,header.site-header .rez-btn a.desktop{display:block}
@@ -1473,7 +1473,7 @@ header.site-header .order-btn,header.site-header .order-btn a{width:120px;height
 header.site-header .rez-btn,header.site-header .rez-btn a{width:98px;height:88px}
 header.site-header .order-btn{top:-5px;background-image:url(assets/img/button-order.png);background-color:rgba(188,80,39,0)}
 header.site-header .rez-btn{top:-10px;background-image:url(assets/img/button-reservations.png);background-color:rgba(211,170,45,0)}
-section.banner .title{top:80px}
+section.banner .title{top:40px}
 section.banner .title.private-dining{top:40px;left:-60px}
 section.banner .title.homepage{-webkit-transform:scale(0.4);transform:scale(0.4)}
 section.banner .title.homepage h1{width:400px;font-size:70px;margin:150px 400px 100px auto}
@@ -1488,12 +1488,13 @@ footer.site-footer .footer-content{height:100%;position:absolute;top:0;left:0;pa
 footer.site-footer .section-partners .info{-ms-flex-preferred-size:10%;flex-basis:10%}
 }@media screen and (min-width:1200px){.main-navigation{text-align:left;right:-20px}
 .main-navigation .menu>li{padding:0 10px;line-height:1}
-}@media(min-width:1200px){header.site-header .btn-wrap{width:280px}
+}@media(min-width:1200px){.logo,h1.logo{margin:-10px 0 0 0}
+header.site-header .btn-wrap{width:280px}
 #primary{margin:550px auto 0 auto}
 body.home #primary{margin:600px auto 0 auto}
 section.banner{height:100%;position:fixed;top:0}
-section.banner .title{top:80px}
-section.banner .title.private-dining{top:100px;left:-60px}
+section.banner .title{top:40px}
+section.banner .title.private-dining{top:40px;left:-60px}
 section.banner .title.homepage{-webkit-transform:scale(0.6);transform:scale(0.6)}
 section.banner .title.homepage h1{width:400px;font-size:80px;margin:150px 400px 100px auto}
 section.banner .title.menus{-webkit-transform:scale(0.8);transform:scale(0.8)}

@@ -1,10 +1,15 @@
 <?php 
-	$img = get_field('banner');
+	// $img = get_field('banner');
 	//$src = get_bloginfo('template_url').'/assets/img/';
 	// echo '<pre>';
 	// print_r($img);
 	// echo '</pre>';
-	$src = $img['url'];
+	$img = get_the_post_thumbnail_url();
+	// echo '<pre>';
+	// print_r($img);
+	// echo '</pre>';
+	// $src = $img['url'];
+	$src =  $img;
 	$alt = $img['alt'];
 	if( is_front_page() ) {
 		$class = 'homepage';
