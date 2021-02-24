@@ -1474,7 +1474,7 @@ header.site-header .rez-btn,header.site-header .rez-btn a{width:98px;height:88px
 header.site-header .order-btn{top:-5px;background-image:url(assets/img/button-order.png);background-color:rgba(188,80,39,0)}
 header.site-header .rez-btn{top:-10px;background-image:url(assets/img/button-reservations.png);background-color:rgba(211,170,45,0)}
 section.banner .title{top:40px}
-section.banner .title.private-dining{top:40px;left:-60px}
+section.banner .title.private-dining{top:0;left:-60px}
 section.banner .title.homepage{-webkit-transform:scale(0.4);transform:scale(0.4)}
 section.banner .title.homepage h1{width:400px;font-size:70px;margin:150px 400px 100px auto}
 section.banner .title.menus{-webkit-transform:scale(0.6);transform:scale(0.6)}
