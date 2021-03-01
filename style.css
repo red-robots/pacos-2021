@@ -4327,7 +4327,7 @@ section.banner .title.private-dining { top: -80px; left: -160px; }
 
 @media (min-width: 900px) { section.banner .title.private-dining { top: 0px; left: -60px; } }
 
-@media (min-width: 1200px) { section.banner .title.private-dining { top: 40px; left: -60px; } }
+@media (min-width: 1200px) { section.banner .title.private-dining { top: 18px; left: -60px; } }
 
 section.banner .title.homepage { background-image: url(assets/img/title-home-new.png); width: 1095px; height: 755px; -webkit-transform: scale(0.2); transform: scale(0.2); }
 

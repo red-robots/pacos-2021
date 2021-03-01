@@ -1496,7 +1496,7 @@ header.site-header .btn-wrap{width:280px}
 body.home #primary{margin:600px auto 0 auto}
 section.banner{height:100%;position:fixed;top:0}
 section.banner .title{top:40px}
-section.banner .title.private-dining{top:40px;left:-60px}
+section.banner .title.private-dining{top:18px;left:-60px}
 section.banner .title.homepage{-webkit-transform:scale(0.6);transform:scale(0.6)}
 section.banner .title.homepage h1{width:400px;font-size:80px;margin:150px 400px 100px auto}
 section.banner .title.menus{-webkit-transform:scale(0.8);transform:scale(0.8)}
