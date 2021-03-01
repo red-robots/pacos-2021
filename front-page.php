@@ -33,6 +33,9 @@ wp_reset_postdata();
 					<div class="pepper">
 						<img src="<?php bloginfo('template_url'); ?>/assets/img/pepper.png">
 					</div>
+					<div class="fiesta">
+						<img src="<?php bloginfo('template_url'); ?>/assets/img/all-fiesta.png">
+					</div>
 				</div>	
 			</div>
 		</section>

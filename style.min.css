@@ -1398,11 +1398,13 @@ section.welcome{text-align:center;clear:both;width:100%;position:relative;line-h
 section.welcome img{width:100%}
 section.welcome .contents{width:100%;height:100%;position:absolute;top:0;left:0;text-align:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 section.welcome .wrap{width:90%;margin:0 auto}
-section.welcome .title,section.welcome .zigzag,section.welcome .copy,section.welcome .pepper{display:inline-block;text-align:center}
-section.welcome .title img,section.welcome .zigzag img,section.welcome .copy img,section.welcome .pepper img{width:100%}
+section.welcome .title,section.welcome .zigzag,section.welcome .copy,section.welcome .pepper,section.welcome .fiesta{display:inline-block;text-align:center}
+section.welcome .title img,section.welcome .zigzag img,section.welcome .copy img,section.welcome .pepper img,section.welcome .fiesta img{width:100%}
 section.welcome .zigzag{margin:20px auto;width:60%}
 section.welcome .copy{line-height:1.6}
-section.welcome .pepper{width:80px;display:inline-block}
+section.welcome .pepper{width:80px;display:none}
+section.welcome .pepper img{display:none}
+section.welcome .fiesta{width:250px;display:inline-block}
 section.paper{width:100%;position:relative;line-height:1.2;float:left;padding:130px 0 50px 0;background-image:url(assets/img/background-2.png);background-repeat:repeat;background-size:cover}
 section.menus{width:100%;position:relative;line-height:0;float:left}
 section.menus img{width:100%}

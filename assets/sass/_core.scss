@@ -594,7 +594,7 @@ section.welcome {
 			width: 50%;
 		}
 	}
-	.title, .zigzag, .copy, .pepper {
+	.title, .zigzag, .copy, .pepper, .fiesta {
 		display: inline-block;
 		text-align: center;
 		img {
@@ -613,6 +613,15 @@ section.welcome {
 	}
 	.pepper {
 		width: 80px;
+		// display: inline-block;
+		display: none;
+		img {
+			display: none;
+		}
+		
+	}
+	.fiesta {
+		width: 250px;
 		display: inline-block;
 	}
 }
