@@ -1362,6 +1362,10 @@ pre{font-family:"Courier 10 Pitch",Courier,monospace;font-size:13px;line-height:
 body{font-family:"Sarabun",sans-serif;background-color:#fbefe1}
 .sr{clip:rect(1px,1px,1px,1px);position:absolute !important;height:1px;width:1px;overflow:hidden}
 .sr:focus{background-color:#333;border-radius:3px;-webkit-box-shadow:0 0 2px 2px rgba(0,0,0,0.6);box-shadow:0 0 2px 2px rgba(0,0,0,0.6);clip:auto !important;color:#FFF;display:block;font-size:14px;font-size:.875rem;font-weight:bold;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}
+.popup{text-align:center;padding:20px;background-color:white}
+.popup a{color:#000;text-decoration:none}
+.popup .view-btn{width:auto;display:inline-block;margin:20px auto}
+.popup .view-btn a{width:auto;display:block;background-color:#b60f0f;color:#fff;padding:10px 20px;border-radius:3px;text-decoration:none;color:#fff}
 .wrapper{max-width:1200px;width:100%;margin:0 auto;padding-left:20px;padding-right:20px}
 .logo,h1.logo,.logo a,h1.logo a{width:250px;height:84px}
 .logo,h1.logo{margin:-3px auto 20px auto;background-size:cover;background-repeat:no-repeat;background-image:url(assets/img/logo.png)}

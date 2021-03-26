@@ -19,6 +19,29 @@
 </head>
 
 <body <?php body_class(); ?>>
+	<!-- Gift Card popup -->
+<?php 
+$active = get_field('turn_on_popup', 'option');
+$offer = get_field('offer', 'option');
+$btnText = get_field('button_text', 'option');
+$btnLink = get_field('button_link', 'option');
+// echo '<pre>';
+// print_r($active);
+// echo '</pre>';
+
+if( $active[0] == 'turnon' && is_front_page() ) { ?>
+	<div style="display: none;">
+		<div class='ajax popup' >
+			<a href="<?php echo $btnLink; ?>" target="_blank">
+				<?php echo $offer; ?>
+			</a>
+		<br>
+			<div class="view-btn">
+				<a href="<?php echo $btnLink; ?>" target="_blank"><?php echo $btnText; ?></a>
+			</div>
+		</div>
+	</div>
+<?php } ?>
 <div id="page" class="site cf">
 	<a class="skip-link sr" href="#content"><?php esc_html_e( 'Skip to content', 'bellaworks' ); ?></a>
 
