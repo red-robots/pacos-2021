@@ -94,6 +94,7 @@ if( $active[0] == 'turnon' && is_front_page() ) {
 	<script type="text/javascript">
 		jQuery(document).ready(function ($) {
 			// Popup
+			//alert('triggered');
 			$.colorbox({inline:true, href:".ajax"});
 		});
 	</script>

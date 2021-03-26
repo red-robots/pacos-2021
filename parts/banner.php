@@ -13,7 +13,7 @@
 	$alt = $img['alt'];
 	if( is_front_page() ) {
 		$class = 'homepage';
-		echo 'hony';
+		//echo 'hony';
 
 		// $img = $src . 'banner-home.png';
 		$title = get_bloginfo('description');
