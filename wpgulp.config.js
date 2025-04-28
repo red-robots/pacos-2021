@@ -34,13 +34,13 @@ const precision = 10;
 // JS Vendor options.
 
 // Path to JS vendor folder.
-const jsVendorSRC = './assets/js/vendors/*.js';
+const jsVendorSRC = './assets/js/vendor/*.js';
 
 // Path to place the compiled JS vendors file.
 const jsVendorDestination = './assets/js/';
 
 // Compiled JS vendors file name. Default set to vendors i.e. vendors.js.
-const jsVendorFile = 'vendors';
+const jsVendorFile = 'vendor';
 
 // JS Custom options.
 

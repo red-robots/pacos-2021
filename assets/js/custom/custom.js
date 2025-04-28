@@ -22,6 +22,20 @@ jQuery(document).ready(function ($) {
 	});
 
 
+	/* Order Option */
+    $(document).on("click","#orderup",function(e){
+    	e.preventDefault();
+    	if( $("div.order-options").length > 0 ) {
+    		$("div.order-options").slideToggle(300);
+    	}
+    });
+
+    $(document).on("click","#closeOrder",function(e){
+    	e.preventDefault();
+    	$("#orderup").trigger('click');
+    });
+
+
 	var swiper = new Swiper('#slideshow', {
 		effect: 'fade', /* "fade", "cube", "coverflow" or "flip" */
 		loop: true,

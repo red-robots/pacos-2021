@@ -25,6 +25,7 @@ $active = get_field('turn_on_popup', 'option');
 $offer = get_field('offer', 'option');
 $btnText = get_field('button_text', 'option');
 $btnLink = get_field('button_link', 'option');
+$order_options = get_field('order_delivery_dropdowns','option');
 // echo '<pre>';
 // print_r($active);
 // echo '</pre>';
@@ -75,11 +76,37 @@ if( $active[0] == 'turnon' && is_front_page() ) { ?>
 
 			<div class="btn-wrap">
 				<div class="order-btn">
-					<a class="mobile" href="<?php echo $orderlink; ?>" target="_blank">
+					<a class="mobile" href="<?php echo $orderlink; ?>" id="orderup">
 						<img src="<?php bloginfo('template_url'); ?>/assets/img/button-order-mobile.png" alt="Order and Delivery">
 					</a>
-					<a class="desktop" href="<?php echo $orderlink;?>" target="_blank">Order and Delivery</a>
+					<a class="desktop"  href="#<?php //echo $orderlink;?>" >Order and Deliveryz</a>
 				</div>
+				<?php if ($order_options) { ?>
+		            <!-- <a href="#" id="orderOption" class="orange">Order</a> -->
+		            <div class="order-options">
+		              <?php foreach ($order_options as $o) {
+		              	// echo '<pre>';
+		              	// print_r($o);
+		                $o_link = $o['link']['url'];
+		                $target = $o['link']['target'];
+		                $o_text = $o['link']['title']; ?>
+		                <?php if ($o_link ) { ?>
+		                  <div class="orderlink">
+		                    <a href="<?php echo $o_link ?>" target="<?php echo $target; ?>">
+		                      <!-- <img src="<?php echo $o_logo['url'] ?>" alt="<?php echo $o['logo']['title'] ?>"> -->
+		                      <?php if ($o_text) { ?>
+		                      <span class="text"><?php echo $o_text ?></span>
+		                      <?php } ?>
+		                    </a>
+		                  </div>
+		                <?php } ?>
+		              <?php } ?>
+		              <div id="closeOrder" class="closediv clear"><span id="close-order">Close</span></div>
+		            </div>
+		        <?php } ?>
+
+
+
 				<div class="rez-btn">
 					<a class="mobile" href="<?php echo $rezlink; ?>" target="_blank">
 						<img src="<?php bloginfo('template_url'); ?>/assets/img/button-reservations-mobile.png" alt="Reservations">

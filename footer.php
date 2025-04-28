@@ -1,5 +1,5 @@
 	</div><!-- #content -->
-
+<style type="text/css">.clear{clear:both;}</style>
 	<?php  
 	// $footlogo = get_field("footlogo","option");
 	// $address = get_field("address","option");
@@ -14,11 +14,21 @@
 	$footer_text = get_field('partners_text','option');
 	$partners = get_field('partners_list','option');
 	$address = get_field('address','option');
+	$address_r = get_field('address_r','option');
 	$facebook = get_field('facebook','option');
 	$twitter = get_field('twitter','option');
 	$instagram = get_field('instagram','option');
 	?>
 <div class="row-1">
+	
+	<div class="clear"></div>
+	<?php if( $address_r ) : ?>
+		<div class="address">
+			<?php foreach($address_r as $adr){ ?>
+				<div class="loc"><?php echo $adr['address']; ?></div>
+			<?php } ?>
+		</div>
+	<?php endif; ?>
 	<?php if( $facebook || $twiiter || $instagram) : ?>
 		<div class="social">
 			<?php if( $facebook ) { ?>
@@ -36,11 +46,6 @@
 					<i class="fab fa-instagram"></i>
 				</a>
 			<?php } ?>
-		</div>
-	<?php endif; ?>
-	<?php if( $address ) : ?>
-		<div class="address">
-			<?php echo $address; ?>
 		</div>
 	<?php endif; ?>
 </div>
