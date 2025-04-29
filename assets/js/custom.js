@@ -32,6 +32,18 @@ jQuery(document).ready(function ($) {
     e.preventDefault();
     $("#orderup").trigger('click');
   });
+
+  /* Order Option */
+  $(document).on("click", "#rezup", function (e) {
+    e.preventDefault();
+    if ($("div.rez-options").length > 0) {
+      $("div.rez-options").slideToggle(300);
+    }
+  });
+  $(document).on("click", "#closeRez", function (e) {
+    e.preventDefault();
+    $("#rezup").trigger('click');
+  });
   var swiper = new Swiper('#slideshow', {
     effect: 'fade',
     /* "fade", "cube", "coverflow" or "flip" */

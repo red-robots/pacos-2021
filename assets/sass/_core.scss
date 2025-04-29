@@ -889,12 +889,32 @@ footer.site-footer {
 		color: rgba(#fff, .7);
 	}
 }
+.rez-options {
+	background: $color-yellow;
+	color: #FFF;
+	.orderlink a {
+		color: #FFF;
+		&:hover {
+			background: tint($color-yellow,20%);
+		}
+	}
+}
 .order-options {
+	background: $color-red;
+	color: #FFF;
+	.orderlink a {
+		color: #FFF;
+		&:hover {
+			background: tint($color-red,20%);
+		}
+	}
+}
+.order-options, .rez-options {
 	display: none;
 	width: 100%;
 	float: left;
-	background: $color-red;
-	color: #FFF;
+	
+	
 	position: absolute;
 	top: 15px;
 	right: 0;
@@ -940,14 +960,12 @@ footer.site-footer {
 			float: left;
 			position: relative;
 			padding: 12px 10px;
-			color: #FFF;
+			
 			width: 100%;
 			text-decoration: none;
 			border-bottom: 1px dotted rgba(255,255,255, 0.35);
 			@include flexgroup-center();
-			&:hover {
-				background: tint($color-red,20%);
-			}
+			
 			img {
 				width:  25%;
 				height: auto;

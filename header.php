@@ -26,6 +26,7 @@ $offer = get_field('offer', 'option');
 $btnText = get_field('button_text', 'option');
 $btnLink = get_field('button_link', 'option');
 $order_options = get_field('order_delivery_dropdowns','option');
+$rez_options = get_field('rez_dropdown','option');
 // echo '<pre>';
 // print_r($active);
 // echo '</pre>';
@@ -108,11 +109,35 @@ if( $active[0] == 'turnon' && is_front_page() ) { ?>
 
 
 				<div class="rez-btn">
-					<a class="mobile" href="<?php echo $rezlink; ?>" target="_blank">
+					<a class="mobile" href="#" target="_blank" id="rezup">
+						<!-- <a class="mobile" href="<?php echo $rezlink; ?>" target="_blank" id="rezup"> -->
 						<img src="<?php bloginfo('template_url'); ?>/assets/img/button-reservations-mobile.png" alt="Reservations">
 					</a>
 					<a class="desktop" href="<?php echo $rezlinkr; ?>" target="_blank">Reservations</a>
 				</div>
+				<?php if ($rez_options) { ?>
+		            <!-- <a href="#" id="orderOption" class="orange">Order</a> -->
+		            <div class="rez-options">
+		              <?php foreach ($rez_options as $o) {
+		              	// echo '<pre>';
+		              	// print_r($o);
+		                $o_link = $o['link']['url'];
+		                $target = $o['link']['target'];
+		                $o_text = $o['link']['title']; ?>
+		                <?php if ($o_link ) { ?>
+		                  <div class="orderlink">
+		                    <a href="<?php echo $o_link ?>" target="<?php echo $target; ?>">
+		                      <!-- <img src="<?php echo $o_logo['url'] ?>" alt="<?php echo $o['logo']['title'] ?>"> -->
+		                      <?php if ($o_text) { ?>
+		                      <span class="text"><?php echo $o_text ?></span>
+		                      <?php } ?>
+		                    </a>
+		                  </div>
+		                <?php } ?>
+		              <?php } ?>
+		              <div id="closeRez" class="closediv clear"><span id="close-order">Close</span></div>
+		            </div>
+		        <?php } ?>
 			</div>
 
 
