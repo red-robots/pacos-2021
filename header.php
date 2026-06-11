@@ -113,7 +113,7 @@ if( $active[0] == 'turnon' && is_front_page() ) { ?>
 						<!-- <a class="mobile" href="<?php echo $rezlink; ?>" target="_blank" id="rezup"> -->
 						<img src="<?php bloginfo('template_url'); ?>/assets/img/button-reservations-mobile.png" alt="Reservations">
 					</a>
-					<a class="desktop" href="<?php echo $rezlinkr; ?>" target="_blank">Reservations</a>
+					<a class="desktop" href="<?php echo $rezlink; ?>" target="_blank">Reservations</a>
 				</div>
 				<?php if ($rez_options) { ?>
 		            <!-- <a href="#" id="orderOption" class="orange">Order</a> -->
